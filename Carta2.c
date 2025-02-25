@@ -17,8 +17,3 @@ printf("Área da cidade: %.2f KM\nPIB: %.f Bilhões\n", area, pib);
 printf("Quantidade de Pontos turísticos: %d\n", turismo);
 printf("Densidade Populacional: %.2f Hab/KM\nPIB por Capital: %4.f milhões\n", Densidade, Capital);
 
-
-
-
-
-}
