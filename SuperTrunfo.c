@@ -85,14 +85,79 @@ int main() {
     printf("superpoder2: %f\n", SuperPoder2);
     printf("X1 Dos crias");
 
-    printf("População: %d venceu (%d)\n", (populacao > populacao2) ? 1 : 2, (populacao > populacao2) ? 1 : 0 );
-    printf("PIB: %d venceu (%d)\n", (pib > pib2) ? 1 : 2, (pib > pib2) ? 1 : 0);
-    printf("Área: %d venceu (%d)\n", (area > area2) ? 1 : 2,(area > area2)? 1 : 0 );
-    printf("Turismo: %d venceu (%d)\n", (turismo > turismo2)? 1 : 2, (turismo> turismo2)? 1 : 0);
-    printf("Densidade %d venceu (%d)\n", (densidade > densidade2)? 1 : 2, (densidade > densidade2)? 1 : 0);
-    printf("Capital: %d venceu (%d)\n",(capital > capital2)? 1 : 2, (capital > capital2)? 1 : 0);
-    printf("SuperPoder: %d venceu (%d)\n", (SuperPoder1 > SuperPoder2)? 1 : 2, (SuperPoder1 > SuperPoder2)? 1 : 0);
+   printf("ATRIBUTO POPULAÇÃO*****\n");
+    printf("Carta 1 - %s: %lu\n", cidade, populacao);
+    printf("Carta 2 - %s: %lu\n", cidade2, populacao2);
+    
+    if (populacao > populacao2) {
+        printf("população de %s é maior\n", cidade);
+    } else {
+        printf("população de %s é maior\n", cidade2);
+    }
 
+printf("ATRIBUTO ÁREA******\n");
+printf("Carta 1 - %s: %f\n", cidade, area);
+printf("Carta 2 - %s: %f\n", cidade2, area2);
+
+if (area > area2)
+{
+    printf("Área de %s é maior\n", cidade);
+}else{
+  printf("Área de %s é maior\n", cidade2);
+}
+
+printf("ATRIBUTO PIB******\n");
+printf("Carta 1 - %s: %f\n", cidade, pib);
+printf("Carta 2 - %s: %f\n", cidade2, pib2);
+
+if (pib > pib2)
+{
+    printf("PIB de %s é maior\n", cidade);
+
+}else{
+    printf("PIB de %s é maior\n", cidade2);
+}
+printf("ATRIBUTO TURISMO******\n");
+printf("Carta 1 - %s: %d\n", cidade, turismo);
+printf("Carta 2 - %s: %d\n", cidade2, turismo2);
+
+if (turismo > turismo2)
+{
+    printf("Turismo de %s é maior\n", cidade);
+}else{
+    printf("Turismo de %s é maior\n", cidade2);
+}
+printf("ATRIBUTO DENSIDADE******\n");
+printf("Carta 1 - %s: %f\n", cidade, densidade);
+printf("Carta 2 - %s: %f\n", cidade2, densidade2);
+if (densidade < densidade2)
+{
+    printf("Densidade de %s é maior\n", cidade);
+
+}else{
+    printf("Densidade de %s é maior\n", cidade2);
+}
+printf("ATRIBUTO CAPITAL******\n");
+printf("Carta 1 - %s: %f\n", cidade, capital);
+printf("Carta 2 - %s: %f\n", cidade2);
+
+if (capital > capital2)
+{
+    printf("Capital de %s é maior\n", cidade);
+}else{
+    printf("Capital de %s é maior\n", cidade2);
+}
+printf("SUPER_PODER*********\n");
+printf("Carta 1 - %s: %f\n", cidade, SuperPoder1);
+printf("Carta 2 - %s: %f\n", cidade2, SuperPoder2);
+if (SuperPoder1 > SuperPoder2)
+{
+    printf("SuperPoder de %s é maior\n", cidade);
+
+}else{
+    printf("SuperPoder de %s é maior\n", cidade2);
+}
+}
 
 }
 
