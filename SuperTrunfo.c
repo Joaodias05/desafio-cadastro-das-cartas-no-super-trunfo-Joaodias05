@@ -139,7 +139,7 @@ if (densidade < densidade2)
 }
 printf("ATRIBUTO CAPITAL******\n");
 printf("Carta 1 - %s: %f\n", cidade, capital);
-printf("Carta 2 - %s: %f\n", cidade2);
+printf("Carta 2 - %s: %f\n", cidade2, capital2);
 
 if (capital > capital2)
 {
