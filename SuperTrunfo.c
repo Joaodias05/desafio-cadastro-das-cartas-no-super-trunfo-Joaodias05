@@ -158,6 +158,3 @@ if (SuperPoder1 > SuperPoder2)
     printf("SuperPoder de %s é maior\n", cidade2);
 }
 }
-
-}
-
