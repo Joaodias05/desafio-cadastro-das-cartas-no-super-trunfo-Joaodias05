@@ -25,15 +25,14 @@ int main() {
     float capital2;
     float SuperPoder2;
 
-
     printf("Digite o estado da carta (A-H):\n");
-    scanf("%s", estado);
+    scanf("%3s", estado);
 
     printf("Digite o codigo da carta:\n");
-    scanf("%s", codigo);
+    scanf("%49s", codigo);
 
     printf("Digite o nome da cidade:\n");
-    scanf("%s", cidade);
+    scanf("%49s", cidade);
 
     printf("Digite a população da cidade:\n");
     scanf("%lu", &populacao);
@@ -83,9 +82,23 @@ int main() {
     printf("densidade2: %f\n", densidade2);
     printf("capital2: %f\n", capital2);
     printf("superpoder2: %f\n", SuperPoder2);
-    printf("X1 Dos crias");
 
-   printf("ATRIBUTO POPULAÇÃO*****\n");
+    int opçao;
+    printf("Menu de comparação\n");
+    printf("1 - População\n");
+    printf("2 - Área\n");
+    printf("3 - PIB\n");
+    printf("4 - Turismo\n");
+    printf("5 - Densidade\n");
+    printf("6 - Capital\n");
+    printf("7 - superpoder\n");
+    printf("Digite a opção desejada;\n");
+    scanf("%d", &opçao);
+
+    printf("X1 Dos crias\n");
+switch (opçao) {
+case 1:   
+    printf("ATRIBUTO POPULAÇÃO*****\n");
     printf("Carta 1 - %s: %lu\n", cidade, populacao);
     printf("Carta 2 - %s: %lu\n", cidade2, populacao2);
     
@@ -94,7 +107,8 @@ int main() {
     } else {
         printf("população de %s é maior\n", cidade2);
     }
-
+break;
+case 2:
 printf("ATRIBUTO ÁREA******\n");
 printf("Carta 1 - %s: %f\n", cidade, area);
 printf("Carta 2 - %s: %f\n", cidade2, area2);
@@ -105,7 +119,8 @@ if (area > area2)
 }else{
   printf("Área de %s é maior\n", cidade2);
 }
-
+break;
+case 3:
 printf("ATRIBUTO PIB******\n");
 printf("Carta 1 - %s: %f\n", cidade, pib);
 printf("Carta 2 - %s: %f\n", cidade2, pib2);
@@ -117,6 +132,8 @@ if (pib > pib2)
 }else{
     printf("PIB de %s é maior\n", cidade2);
 }
+break;
+case 4:
 printf("ATRIBUTO TURISMO******\n");
 printf("Carta 1 - %s: %d\n", cidade, turismo);
 printf("Carta 2 - %s: %d\n", cidade2, turismo2);
@@ -127,6 +144,8 @@ if (turismo > turismo2)
 }else{
     printf("Turismo de %s é maior\n", cidade2);
 }
+break;
+case 5:
 printf("ATRIBUTO DENSIDADE******\n");
 printf("Carta 1 - %s: %f\n", cidade, densidade);
 printf("Carta 2 - %s: %f\n", cidade2, densidade2);
@@ -137,6 +156,8 @@ if (densidade < densidade2)
 }else{
     printf("Densidade de %s é maior\n", cidade2);
 }
+break;
+case 6:
 printf("ATRIBUTO CAPITAL******\n");
 printf("Carta 1 - %s: %f\n", cidade, capital);
 printf("Carta 2 - %s: %f\n", cidade2, capital2);
@@ -147,6 +168,8 @@ if (capital > capital2)
 }else{
     printf("Capital de %s é maior\n", cidade2);
 }
+break;
+case 7:
 printf("SUPER_PODER*********\n");
 printf("Carta 1 - %s: %f\n", cidade, SuperPoder1);
 printf("Carta 2 - %s: %f\n", cidade2, SuperPoder2);
@@ -156,5 +179,10 @@ if (SuperPoder1 > SuperPoder2)
 
 }else{
     printf("SuperPoder de %s é maior\n", cidade2);
+}
+break;
+default:
+printf("Opção invalida\n");
+
 }
 }
