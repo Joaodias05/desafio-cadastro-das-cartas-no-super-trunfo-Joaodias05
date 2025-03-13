@@ -83,7 +83,9 @@ int main() {
     printf("capital2: %f\n", capital2);
     printf("superpoder2: %f\n", SuperPoder2);
 
-    int opçao;
+    int opçao, opçao2;
+    float valor1, valor2, valor11, valor22;
+    float soma1, soma2;
     printf("Menu de comparação\n");
     printf("1 - População\n");
     printf("2 - Área\n");
@@ -92,97 +94,102 @@ int main() {
     printf("5 - Densidade\n");
     printf("6 - Capital\n");
     printf("7 - superpoder\n");
-    printf("Digite a opção desejada;\n");
+    printf("Digite a primeiro Atributo;\n");
     scanf("%d", &opçao);
 
+ printf("Digite o segundo atributo:\n");
+ scanf("%d", &opçao2);
     printf("X1 Dos crias\n");
 switch (opçao) {
 case 1:   
-    printf("ATRIBUTO POPULAÇÃO*****\n");
-    printf("Carta 1 - %s: %lu\n", cidade, populacao);
-    printf("Carta 2 - %s: %lu\n", cidade2, populacao2);
-    
-    if (populacao > populacao2) {
-        printf("população de %s é maior\n", cidade);
-    } else {
-        printf("população de %s é maior\n", cidade2);
-    }
-break;
+valor1 = populacao;
+valor2 = populacao2;
+break; 
 case 2:
-printf("ATRIBUTO ÁREA******\n");
-printf("Carta 1 - %s: %f\n", cidade, area);
-printf("Carta 2 - %s: %f\n", cidade2, area2);
-
-if (area > area2)
-{
-    printf("Área de %s é maior\n", cidade);
-}else{
-  printf("Área de %s é maior\n", cidade2);
-}
+valor1 = area;
+valor2 = area2;
 break;
 case 3:
-printf("ATRIBUTO PIB******\n");
-printf("Carta 1 - %s: %f\n", cidade, pib);
-printf("Carta 2 - %s: %f\n", cidade2, pib2);
-
-if (pib > pib2)
-{
-    printf("PIB de %s é maior\n", cidade);
-
-}else{
-    printf("PIB de %s é maior\n", cidade2);
-}
+valor1 = pib;
+valor2 = pib2;
 break;
 case 4:
-printf("ATRIBUTO TURISMO******\n");
-printf("Carta 1 - %s: %d\n", cidade, turismo);
-printf("Carta 2 - %s: %d\n", cidade2, turismo2);
-
-if (turismo > turismo2)
-{
-    printf("Turismo de %s é maior\n", cidade);
-}else{
-    printf("Turismo de %s é maior\n", cidade2);
-}
+valor1 = turismo;
+valor2 = turismo2;
 break;
 case 5:
-printf("ATRIBUTO DENSIDADE******\n");
-printf("Carta 1 - %s: %f\n", cidade, densidade);
-printf("Carta 2 - %s: %f\n", cidade2, densidade2);
-if (densidade < densidade2)
-{
-    printf("Densidade de %s é maior\n", cidade);
-
-}else{
-    printf("Densidade de %s é maior\n", cidade2);
-}
+valor1 = densidade;
+valor2 = densidade2;
 break;
 case 6:
-printf("ATRIBUTO CAPITAL******\n");
-printf("Carta 1 - %s: %f\n", cidade, capital);
-printf("Carta 2 - %s: %f\n", cidade2, capital2);
-
-if (capital > capital2)
-{
-    printf("Capital de %s é maior\n", cidade);
-}else{
-    printf("Capital de %s é maior\n", cidade2);
-}
+valor1 = capital;
+valor2 = capital2;
 break;
 case 7:
-printf("SUPER_PODER*********\n");
-printf("Carta 1 - %s: %f\n", cidade, SuperPoder1);
-printf("Carta 2 - %s: %f\n", cidade2, SuperPoder2);
-if (SuperPoder1 > SuperPoder2)
-{
-    printf("SuperPoder de %s é maior\n", cidade);
-
-}else{
-    printf("SuperPoder de %s é maior\n", cidade2);
-}
+valor1 = SuperPoder1;
+valor2 = SuperPoder2;
 break;
 default:
-printf("Opção invalida\n");
+printf("opçao invalida\n");}
 
+switch (opçao2)
+{
+case 1:
+    valor11 = populacao;
+    valor22 = populacao2;
+    break;
+case 2:
+valor11 = area;
+valor22 = area2;
+break;
+case 3:
+valor11 = pib;
+valor22 = pib2;
+break;
+case 4:
+valor11 = turismo;
+valor22 = turismo2;
+break;
+case 5:
+valor11 = densidade;
+valor22 = densidade2;
+break;
+case 6:
+valor11 = capital;
+valor22 = capital2;
+break;
+case 7:
+valor11 = SuperPoder1;
+valor22 = SuperPoder2;
+    break;
+
+default:
+printf("Opçao invalida\n");
+    break;
 }
+printf("Comparação de atributos\n");
+ printf("atributo 1: %s\n", (opçao == 1) ? "população" : (opçao == 2) ? "area" : (opçao == 3) ? "pib" : (opçao == 4) ? "turismo" : (opçao == 5) ? "densidade" : "capital");
+ printf("Carta 1 - %s: %f\n", cidade, valor1);
+printf("Carta 2 - %s: %f\n", cidade2, valor2);
+printf("Atributo 2: %s\n", (opçao2 == 1) ? "populaçao" : (opçao2 == 2) ? "area" : (opçao2 == 3) ? "pib" : (opçao2 == 4) ? "turismo" : (opçao2 == 5) ? "densidade" : "capital");
+printf("Carta 1 - %s: %f\n", cidade, valor11);
+printf("Carta 2 - %s: %f\n", cidade2 ,valor22); 
+
+soma1 = valor1 + valor11;
+soma2 = valor2 + valor22;
+
+printf("Soma de atributos\n");
+printf("Carta 1 - %s: %f\n", cidade, soma1);
+printf("Carta 2 - %s; %f\n", cidade2, soma2);
+
+if (soma1 > soma2)
+{
+    printf("A carta vencedora é: %s\n", cidade);
+}else if (soma1 < soma2){
+    printf("A carta vencedora é: %s\n", cidade2);
+} else
+{
+    printf("Empate\n");
+}
+
 }
